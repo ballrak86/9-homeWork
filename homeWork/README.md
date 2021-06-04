@@ -135,6 +135,6 @@ findYIp
 findErrorCode
 findAllCode
 #Отправляем на почту собранную статистику и в конце письма пишем промежуток поиска данных
-echo "${pastHour}:00:00 - $(date "+%d/%b/%Y:%H"):00:00" |  mutt -s "$HOSTNAME" -i /tmp/$HOSTNAME -- $eMail
+echo "${pastHour}:00:00 - ${pastHour}:59:59" |  mutt -s "$HOSTNAME" -i /tmp/$HOSTNAME -- $eMail
 #Удаляем pid_file
 rm -f $pid_file
